@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-0gt*%zkmfh^j9e&c5n1)xbv(ss0_z97s0o*ggyt2dhy-(35ymv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -74,11 +75,23 @@ WSGI_APPLICATION = 'videoconferncing.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'videoapp',
+		'USER': 'root',
+		'PASSWORD': 'sarthak@',
+		'HOST':'127.0.0.1',
+		'PORT':'3306',
+	}
 }
 
 
