@@ -84,16 +84,16 @@ WSGI_APPLICATION = 'videoconferncing.wsgi.application'
 # }
 
 
-DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'videoapp',
-		'USER': 'root',
-		'PASSWORD': 'sarthak@',
-		'HOST': 'localhost',
-		'PORT':'3306',
-	}
-}
+# DATABASES = {
+# 	'default': {
+# 		'ENGINE': 'django.db.backends.mysql',
+# 		'NAME': 'videoapp',
+# 		'USER': 'root',
+# 		'PASSWORD': 'sarthak@',
+# 		'HOST': 'localhost',
+# 		'PORT':'3306',
+# 	}
+# }
 
 
 
@@ -113,16 +113,16 @@ DATABASES = {
 
 
 
-# DATABASES = {
-# 	'default': {
-# 		'ENGINE': 'django.db.backends.postgresql',
-# 		'NAME': 'railway',
-# 		'USER': 'postgres',
-# 		'PASSWORD': 'hCwpr59nmgBdz2r5OFM2',
-# 		'HOST': 'containers-us-west-44.railway.app',
-# 		'PORT':'7748',
-# 	}
-# }
+DATABASES = {
+	'default': {
+		'ENGINE': 'django.db.backends.postgresql',
+		'NAME': 'railway',
+		'USER': 'postgres',
+		'PASSWORD': 'uImzoO5ifp5G5oVjYXOX',
+		'HOST': 'containers-us-west-199.railway.app',
+		'PORT':'7492',
+	}
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
