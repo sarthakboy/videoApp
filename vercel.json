@@ -8,13 +8,12 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "videoconferncing/wsgi.py"
+      "dest": "serverless/handler.py"
     }
   ],
   "functions": {
     "api": {
-      "handler": "videoconferencing/wsgi.application",
-      "memory": 512
+      "handler": "serverless/handler.py"
     }
   }
 }
