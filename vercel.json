@@ -1,14 +1,20 @@
 {
-    "builds": [
-      {
-        "src": "videoconferncing/wsgi.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "videoconferncing/wsgi.py"
-      }
-    ]
+  "builds": [
+    {
+      "src": "videoconferncing/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "videoconferncing/wsgi.py"
+    }
+  ],
+  "functions": {
+    "api": {
+      "handler": "videoconferencing/wsgi.application",
+      "memory": 512
+    }
   }
+}
