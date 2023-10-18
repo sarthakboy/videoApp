@@ -12,9 +12,11 @@
     }
   ],
   "functions": {
-    "api": {
-      "handler": "videoconferencing.wsgi.application",
-      "memory": 512
+    "video_conferencing": {
+      "runtime": "vercel-python@0.4.0",
+      "handler": "video_conferencing.handler"
     }
   }
+  
+  
 }
