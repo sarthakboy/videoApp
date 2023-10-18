@@ -1,20 +1,20 @@
 {
-  "builds": [{
-      "src": "videoconferncing/wsgi.py",
+  "builds": [
+    {
+      "src": "videoconferencing/wsgi.py",
       "use": "@vercel/python"
-  },
-  {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "staticfiles_build" }
-  }],
+    }
+  ],
   "routes": [
-      {
-          "src": "/static/(.*)",
-          "dest": "/static/$1"
-      },
-      {
-          "src": "/(.*)",
-          "dest": "videoconferncing/wsgi.py"
-      }
-  ]
+    {
+      "src": "/(.*)",
+      "dest": "videoconferencing/wsgi.py"
+    }
+  ],
+  "functions": {
+    "api": {
+      "handler": "videoconferencing.wsgi.application",
+      "memory": 512
+    }
+  }
+}
